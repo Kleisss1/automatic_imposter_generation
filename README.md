@@ -1,6 +1,6 @@
 ## How it works (please read!)
 
-So what is this in particular? Well, any TW modders that use TWeak know the pain of having to manually add imposter lines to every single model you add. So this automates it, because I can't bring myself to spend a whole day copy pasting.
+So what is this in particular? 
 
 The premise is that all **.variantmeshdefinition** files are **XML** files, so the script will basically parse the entire file in search of any **VARIANT_MESH** elements like so:
 
@@ -34,6 +34,7 @@ Please consider I'm not as well versed in Python, so some GPT assistance was nee
    2. It is not flawless. Please, check the output everytime you run this tool as sometimes it may not work. Don't ask me why.
    3. The script **REQUIRES the python dependencies**. Please download them here: https://www.python.org/downloads/
    4. The script is launched via a .bat file. I will make a shinier interface in the future.
+   5. This was designed for **Attila: TW** but I struggle to see it not working for other games. Any errors or incompatibilities please contact me.
 
 If you are skeptical about the .bat file or... whatever... here's the code:
 
