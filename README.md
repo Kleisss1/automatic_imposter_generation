@@ -2,8 +2,6 @@
 
 This is a tool that I made in my spare time. I'm not as well versed in python so some GPT assistance was needed. If you wish to make any modifications and upload them on your own, please credit this page here, it's all I ask.
 
-** This REQUIRES a local folder to work. Go to releases and download the .rar file there. If not, simply download the .bat and .py into a folder and, inside that folder, create an input and output folder (must have those names).
-
 The premise is that all .variantmeshdefinition files are XML files, so the script will basically parse the entire file in search of any VARIANT_MESH elements like so:
 
   def add_imposter_to_vmd(file_path, output_path):
@@ -18,7 +16,7 @@ The premise is that all .variantmeshdefinition files are XML files, so the scrip
     tree.write(output_path, encoding='utf-8', xml_declaration=True)
 
 
-Then it is all saved neatly.
+Then it is all saved neatly. The tool automatically creates the input and output folders. Simply run the script. It will also fetch your local directory.
 
 Some considerations: 
 
