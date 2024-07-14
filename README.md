@@ -1,6 +1,6 @@
-! Please read !
+Read!
 
-This is a tool that I made in my spare time. I'm not as well versed in python so some GPT assistance was needed. If you wish to make any modifications and upload them on your own, please credit this page here, it's all I ask.
+# This is a tool that I made in my spare time. I'm not as well versed in python so some GPT assistance was needed. If you wish to make any modifications and upload them on your own, please credit this page here, it's all I ask.
 
 The premise is that all .variantmeshdefinition files are XML files, so the script will basically parse the entire file in search of any VARIANT_MESH elements like so:
 
@@ -15,8 +15,12 @@ The premise is that all .variantmeshdefinition files are XML files, so the scrip
     
     tree.write(output_path, encoding='utf-8', xml_declaration=True)
 
+For this we import the necessary modules: 
 
-Then it is all saved neatly. The tool automatically creates the input and output folders. Simply run the script. It will also fetch your local directory.
+    import os
+    import xml.etree.ElementTree as ET # XML module
+
+Then it is all saved. The tool automatically creates the input and output folders. Simply run the script. It will also fetch your local directory. You can run as many files as you want at once, as long as they're in the input folder.
 
 Some considerations: 
 
