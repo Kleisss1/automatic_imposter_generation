@@ -31,7 +31,7 @@ Please consider I'm not as well versed in Python, so some GPT assistance was nee
 ## Some considerations: 
 
    1. It will add the imposter suffix to every **VARIANT_MESH** model line. If you don't want imposters to appear in any certain part of a VMD, either edit the code or contact me and we can figure it out.
-   2. It is not flawless. Please, check the output everytime you run this tool as sometimes it may not work. Don't ask me why.
+   2. It might not flawless. Please, check the output everytime you run this tool.
    3. The script **REQUIRES the python dependencies**. Please download it here: https://www.python.org/downloads/ (Important, when installing Python, select "Add Python to PATH". Check custom installation if you want to do anything specific, if not, click install now.)
    4. The script is launched via a .bat file. I will make a shinier interface in the future.
    5. This was designed for **Attila: TW** but I struggle to see it not working for other games. Any errors or incompatibilities please contact me.
