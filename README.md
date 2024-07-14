@@ -1,10 +1,10 @@
-Read!
+## How it works (please read!)
 
-# This is a tool that I made in my spare time. I'm not as well versed in python so some GPT assistance was needed. If you wish to make any modifications and upload them on your own, please credit this page here, it's all I ask.
+So what is this in particular? Well, any TW modders that use TWeak know the pain of having to manually add imposter lines to every single model you add. So this automates it, because I can't bring myself to spend a whole day copy pasting.
 
-The premise is that all .variantmeshdefinition files are XML files, so the script will basically parse the entire file in search of any VARIANT_MESH elements like so:
+The premise is that all **.variantmeshdefinition** files are **XML** files, so the script will basically parse the entire file in search of any **VARIANT_MESH** elements like so:
 
-  def add_imposter_to_vmd(file_path, output_path):
+    def add_imposter_to_vmd(file_path, output_path):
     tree = ET.parse(file_path)
     root = tree.getroot()
 
@@ -20,13 +20,19 @@ For this we import the necessary modules:
     import os
     import xml.etree.ElementTree as ET # XML module
 
-Then it is all saved. The tool automatically creates the input and output folders. Simply run the script. It will also fetch your local directory. You can run as many files as you want at once, as long as they're in the input folder.
+Then it is all saved. 
 
-Some considerations: 
+**The tool automatically creates the input and output folders, simply run the script. It will also fetch your local directory.** You can run as many files as you want at once, as long as they're in the input folder. 
 
-   1. It will add the imposter suffix to every VARIANT_MESH model line. If you don't want imposters to appear in any certain part of a VMD, either edit the code or contact me and we can figure it out.
+Please consider I'm not as well versed in Python, so some GPT assistance was needed, but I'm learning. 
+
+### If you wish to make any modifications and upload them on your own, please credit this page here, it's all I ask.
+
+## Some considerations: 
+
+   1. It will add the imposter suffix to every **VARIANT_MESH** model line. If you don't want imposters to appear in any certain part of a VMD, either edit the code or contact me and we can figure it out.
    2. It is not flawless. Please, check the output everytime you run this tool as sometimes it may not work. Don't ask me why.
-   3. The script REQUIRES the python dependencies. Please download them here: https://www.python.org/downloads/
+   3. The script **REQUIRES the python dependencies**. Please download them here: https://www.python.org/downloads/
    4. The script is launched via a .bat file. I will make a shinier interface in the future.
 
 If you are skeptical about the .bat file or... whatever... here's the code:
