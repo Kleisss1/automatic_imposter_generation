@@ -2,7 +2,7 @@
 
 So what is this in particular? 
 
-The premise is that all **.variantmeshdefinition** files are **XML** files, so the script will basically parse the entire file in search of any **VARIANT_MESH** elements like so:
+The premise is that all **.variantmeshdefinition** files are **XML** files, so the script will basically parse the entire file in search of any **VARIANT_MESH** elements like so
 
     def add_imposter_to_vmd(file_path, output_path):
     tree = ET.parse(file_path)
@@ -10,17 +10,22 @@ The premise is that all **.variantmeshdefinition** files are **XML** files, so t
 
     for variant_mesh in root.findall(".//VARIANT_MESH"):
         model_path = variant_mesh.get('model')
+	
+We get the model attribute that is inside any <VARIANT_MESH model=""/> line and store it in model_path.
+ 
         if model_path and model_path.endswith('.rigid_model_v2'):
             variant_mesh.set('imposter_model', model_path)
+
+If the path ends with a .rmv2 type file then we will add it as a new imposter. The script will parse all lines (set by the for loop above) until it ends.     
     
     tree.write(output_path, encoding='utf-8', xml_declaration=True)
 
-For this we import the necessary modules: 
+Then tree.write will save the modified XML to an specified output_path previously declared.
+
+For this to work we must import the necessary modules: 
 
     import os
     import xml.etree.ElementTree as ET # XML module
-
-Then it is all saved. 
 
 **The tool automatically creates the input and output folders, simply run the script. It will also fetch your local directory.** You can run as many files as you want at once, as long as they're in the input folder. 
 
