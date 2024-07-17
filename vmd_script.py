@@ -33,7 +33,7 @@ def add_imposter_to_vmd(file_path, output_path):
 
 # Save each .variantmeshdefinition file
 for filename in os.listdir(input_dir):
-    if filename.endswith('.variantmeshdefinition'):
+    if filename.endswith(('.variantmeshdefinition', '.VariantMeshDefinition')):
         input_file_path = os.path.join(input_dir, filename)
         output_file_path = os.path.join(output_dir, filename)
         add_imposter_to_vmd(input_file_path, output_file_path)
